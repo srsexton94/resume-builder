@@ -42,13 +42,25 @@ header {
 
 main {
   background-color: $base;
-  height: 210vh;
+  text-align: center;
   width: 100vw;
+
+  form {
+    overflow: scroll;
+    padding: 0;
+    text-align: center;
+    width: 35vw;
+  }
+
+  #display {
+    width: 60vw;
+  }
 
   .sections {
     display: inline-block;
+    height: 100vh;
     margin: 5vh auto;
-    width: 80vw;
+    min-height: 100vh;
   }
 }
 @media only screen and (max-width: 700px) {
