@@ -42,21 +42,17 @@ header {
 
 main {
   background-color: $base;
-  height: 100vh;
+  height: 210vh;
   width: 100vw;
 
   .sections {
-    border: 1px solid black;
     display: inline-block;
-    height: 95vh;
-    margin: 2vh auto;
-    width: 45vw;
+    margin: 5vh auto;
+    width: 80vw;
   }
 }
 @media only screen and (max-width: 700px) {
   main {
-    height: 200vh;
-
     .sections {
       width: 90vw;
     }
