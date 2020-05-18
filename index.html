@@ -317,15 +317,18 @@
 
             <fieldset>
               <legend>Profiles:</legend>
-              <label for="network-input">Network:
-                <input type="text" class="form-control" id="network-input" name="network" placeholder="Twitter">
-              </label>
-              <label for="username-input">Username:
-                <input type="text" class="form-control" id="username-input" name="username" placeholder="john92">
-              </label>
-              <label for="url-input">URL:
-                <input type="text" class="form-control" id="url-input" name="url" placeholder="http://twitter.com/john92">
-              </label>
+              <section class="profile-section">
+                <label for="network-input">Network:
+                  <input type="text" class="form-control" id="network-input" name="network" placeholder="Twitter">
+                </label>
+                <label for="username-input">Username:
+                  <input type="text" class="form-control" id="username-input" name="username" placeholder="john92">
+                </label>
+                <label for="url-input">URL:
+                  <input type="text" class="form-control" id="url-input" name="url" placeholder="http://twitter.com/john92">
+                </label>
+              </section>
+              <button class="btn btn-sm btn-danger">Add another profile</button>
             </fieldset>
           </fieldset>
           <!-- {
@@ -409,7 +412,31 @@
 } -->
         </form>
         <section id="display" class="sections">
+          <div class="btn-group">
+            <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Choose Theme
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Elegant</a>
+              <a class="dropdown-item" href="#">Paper</a>
+              <a class="dropdown-item" href="#">Kendall</a>
+              <a class="dropdown-item" href="#">Flat</a>
+              <a class="dropdown-item" href="#">Modern</a>
+              <a class="dropdown-item" href="#">Classy</a>
+              <a class="dropdown-item" href="#">Class</a>
+              <a class="dropdown-item" href="#">Short</a>
+              <a class="dropdown-item" href="#">Slick</a>
+              <a class="dropdown-item" href="#">Kwan</a>
+              <a class="dropdown-item" href="#">OnePage</a>
+              <a class="dropdown-item" href="#">Spartan</a>
+              <a class="dropdown-item" href="#">Stackoverflow</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">JSON</a>
+            </div>
+          </div>
         </section>
+        <footer>footer
+        </footer>
       </main>
     </body>
 </html>
