@@ -56,8 +56,19 @@ main {
     text-align: center;
     width: 75vw;
 
+    h4 {
+      font-size: 2.5em;
+      margin-top: 5vh;
+    }
+
     legend {
       font-weight: bold;
+    }
+
+    #basics {
+      border: 1px solid black;
+      margin: 5vh auto;
+      width: 80%;
     }
   }
 

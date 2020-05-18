@@ -27,10 +27,10 @@
           <fieldset id="basics" class="form-group">
             <legend>The Basics:</legend>
             <label>Name:
-              <input type="text" class="form-control" id="name-input" name="name" placeholder="Zhang San, Juan Pérez, Jane Doe">
+              <input type="text" class="form-control" id="name-input" name="name" placeholder="Zhang San">
             </label>
             <label>Title:
-              <input type="text" class="form-control" id="title-input" name="title" placeholder="Web Designer, Data Scientist, Software Engineer">
+              <input type="text" class="form-control" id="title-input" name="title" placeholder="Web Designer">
             </label>
             <label>Email:
               <input type="email" class="form-control" id="email-input" name="email" placeholder="placeholder@email.com">
@@ -429,52 +429,114 @@
             <legend>Awards:</legend>
             <fieldset>
               <label>Title:
-                <input type="text" class="form-control" name="title" placeholder="">
+                <input type="text" class="form-control" name="title" placeholder="Best in Class">
+              </label>
+              <label>Date:
+                <input type="date" class="form-control" name="date">
+              </label>
+              <label>Sponsor:
+                <input type="text" class="form-control" name="awarder" placeholder="The Association">
+              </label>
+              <label>Summary:
+                <textarea  class="form-control" name="summary" rows="2"></textarea>
               </label>
             </fieldset>
           </fieldset>
-          <!-- {
+          <button id="add-award" class="btn btn-sm btn-danger">Add another award</button>
 
+          <fieldset id="publications" class="form-group">
+            <legend>Publications:</legend>
+            <fieldset>
+              <label>Title:
+                <input type="text" class="form-control" name="name" placeholder="A wonderful Title">
+              </label>
+              <label>Publisher:
+                <input type="text" class="form-control" name="publisher" placeholder="Company">
+              </label>
+              <label>Publication Date:
+                <input type="date" class="form-control" name="releaseDate">
+              </label>
+              <label>Website:
+                <input type="url" class="form-control" name="website" placeholder="https://prestegious.journal.org/">
+              </label>
+              <label>Summary:
+                <textarea  class="form-control" name="summary" rows="2"></textarea>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-publication" class="btn btn-sm btn-danger">Add another publication</button>
 
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "website": "http://publication.com",
-    "summary": "Description..."
-  }],
-  "skills": [{
-    "name": "Web Development",
-    "level": "Master",
-    "keywords": [
-      "HTML",
-      "CSS",
-      "Javascript"
-    ]
-  }],
-  "languages": [{
-    "language": "English",
-    "fluency": "Native speaker"
-  }],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference..."
-  }]
-} -->
+          <fieldset id="skills" class="form-group">
+            <legend>Skills:</legend>
+            <fieldset>
+              <label>Name:
+                <input type="text" class="form-control" name="skill-name" placeholder="UX Design">
+              </label>
+              <label for="skill-level">Skill Level:
+                <select class="form-control" id="skill-level">
+                  <option value="expert">Expert (recognized authority)</option>
+                  <option value="advanced">Advanced (applied theory)</option>
+                  <option value="intermediate">Intermediate (pratical application)</option>
+                  <option value="novice">Novice (limited experience)</option>
+                  <option value="awareness">Fundamental Awareness (basic knowledge)</option>
+                </select>
+              </label>
+              <label>Keywords:
+                <textarea  class="form-control" name="keywords" rows="2"></textarea>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-skill" class="btn btn-sm btn-danger">Add another skill</button>
+
+          <fieldset id="languages" class="form-group">
+            <legend>Spoken Languages:</legend>
+            <fieldset>
+              <label>Language:
+                <input type="text" class="form-control" name="language" placeholder="English">
+              </label>
+              <label for="fluency">Fluency:
+                <select class="form-control" id="fluency">
+                  <option value="native">Native/Bilingual</option>
+                  <option value="fluent">Full Professional Fluency</option>
+                  <option value="professional">Professional Working Proficiency</option>
+                  <option value="limited">Limited Working Proficiency</option>
+                  <option value="elementary">Elementary Proficiency</option>
+                </select>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-language" class="btn btn-sm btn-danger">Add another language</button>
+
+          <fieldset id="interests" class="form-group">
+            <legend>Personal Interests:</legend>
+            <fieldset>
+              <label>Interest:
+                <input type="text" class="form-control" name="name" placeholder="Wildlife">
+              </label>
+              <label>Keywords:
+                <textarea  class="form-control" name="keywords" rows="2"></textarea>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-interest" class="btn btn-sm btn-danger">Add another interest</button>
+
+          <fieldset id="references" class="form-group">
+            <legend>References:</legend>
+            <fieldset>
+              <label>Name:
+                <input type="text" class="form-control" name="name" placeholder="Juana Pérez">
+              </label>
+              <label>Reference:
+                <textarea  class="form-control" name="keywords" rows="2"></textarea>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-reference" class="btn btn-sm btn-danger">Add another reference</button>
+
+          <input type="submit" class="btn btn-lg btn-primary" value="Submit">
         </form>
+
+        <!-- Resume Display Section: Revealed after submit -->
         <section id="display" class="sections">
           <div class="btn-group">
             <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
