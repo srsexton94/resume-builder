@@ -25,7 +25,6 @@
         <form id="form" class="sections">
           <h4>Resume Details:</h4>
           <fieldset id="basics" class="form-group">
-
             <legend>The Basics:</legend>
             <label>Name:
               <input type="text" class="form-control" id="name-input" name="name" placeholder="Zhang San, Juan Pérez, Jane Doe">
@@ -45,8 +44,7 @@
             <label for="summary-input">Professional summary:
               <textarea  class="form-control" id="summary-input" name="summary" rows="2"></textarea>
             </label>
-
-            <fieldset>
+            <fieldset id="location" class="form-group">
               <legend>Location</legend>
               <label for="address-input">Street Address:
                 <input type="text" class="form-control" id="address-input" name="address" placeholder="2712 Broadway St">
@@ -314,10 +312,9 @@
                 </select>
               </label>
             </fieldset>
-
-            <fieldset>
+            <fieldset id="profiles" class="form-group">
               <legend>Profiles:</legend>
-              <section class="profile-section">
+              <fieldset class="profile-section">
                 <label for="network-input">Network:
                   <input type="text" class="form-control" id="network-input" name="network" placeholder="Twitter">
                 </label>
@@ -327,51 +324,118 @@
                 <label for="url-input">URL:
                   <input type="text" class="form-control" id="url-input" name="url" placeholder="http://twitter.com/john92">
                 </label>
-              </section>
-              <button class="btn btn-sm btn-danger">Add another profile</button>
+              </fieldset>
+            </fieldset>
+            <button id="add-profile" class="btn btn-sm btn-danger">Add another profile</button>
+          </fieldset>
+
+          <fieldset id="work" class="form-group">
+            <legend>Work:</legend>
+            <fieldset>
+              <label>Company:
+                <input type="text" class="form-control" name="company" placeholder="Company Name">
+              </label>
+              <label>Position:
+                <input type="text" class="form-control" name="position" placeholder="President">
+              </label>
+              <label>Summary:
+                <textarea  class="form-control" name="summary" rows="2"></textarea>
+              </label>
+              <label>Start Date:
+                <input type="date" class="form-control" name="startDate">
+              </label>
+              <label>End Date:
+                <input type="date" class="form-control" name="endDate">
+                <input type="checkbox">I still work here
+              </label>
+              <label>Website:
+                <input type="url" class="form-control" name="website" placeholder="https://mycompany.org">
+              </label>
+              <label>Accomplishments/Highlights:
+                <textarea  class="form-control" name="highlights" rows="2"></textarea>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-work" class="btn btn-sm btn-danger">Add another job</button>
+
+          <fieldset id="volunteer" class="form-group">
+            <legend>Volunteering:</legend>
+            <fieldset>
+              <label>Organization:
+                <input type="text" class="form-control" name="organization" placeholder="Habitat for Humanity">
+              </label>
+              <label>Position:
+                <input type="text" class="form-control" name="position" placeholder="Construction Volunteer">
+              </label>
+              <label>Summary:
+                <textarea  class="form-control" name="summary" rows="2"></textarea>
+              </label>
+              <label>Start Date:
+                <input type="date" class="form-control" name="startDate">
+              </label>
+              <label>End Date:
+                <input type="date" class="form-control" name="endDate">
+                <input type="checkbox">I still work here
+              </label>
+              <label>Website:
+                <input type="url" class="form-control" name="website" placeholder="https://www.habitat.org/">
+              </label>
+              <label>Accomplishments/Highlights:
+                <textarea  class="form-control" name="highlights" rows="2"></textarea>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-volunteer" class="btn btn-sm btn-danger">Add another volunteer job</button>
+
+          <fieldset id="education" class="form-group">
+            <legend>Education:</legend>
+            <fieldset>
+              <label>Institution:
+                <input type="text" class="form-control" name="institution" placeholder="University of Columbia">
+              </label>
+              <label>Course of Study:
+                <input type="text" class="form-control" name="area" placeholder="Construction Volunteer">
+              </label>
+              <label for="studyType">Degree:
+                <select class="form-control" id="studyType">
+                  <option value="secondary">High School/G.E.D.</option>
+                  <option value="associates">Associate's (2yr)</option>
+                  <option value="bachelors">Bachelor's (4yr)</option>
+                  <option value="masters">Master's (1-2yr graduate)</option>
+                  <option value="">Doctoral (2+yr postgraduate)</option>
+                </select>
+              </label>
+              <label>Summary:
+                <textarea  class="form-control" name="summary" rows="2"></textarea>
+              </label>
+              <label>Start Date:
+                <input type="date" class="form-control" name="startDate">
+              </label>
+              <label>End Date:
+                <input type="date" class="form-control" name="endDate">
+                <input type="checkbox">I'm still a student
+              </label>
+              <label>GPA:
+                <input type="number" class="form-control" name="gpa" placeholder="3.4">
+              </label>
+              <label>Courses:
+                <textarea  class="form-control" name="courses" rows="2"></textarea>
+              </label>
+            </fieldset>
+          </fieldset>
+          <button id="add-education" class="btn btn-sm btn-danger">Add another course of study</button>
+
+          <fieldset id="awards" class="form-group">
+            <legend>Awards:</legend>
+            <fieldset>
+              <label>Title:
+                <input type="text" class="form-control" name="title" placeholder="">
+              </label>
             </fieldset>
           </fieldset>
           <!-- {
 
-    "profiles": [{
-      "network": "Twitter",
-      "username": "john",
-      "url": "http://twitter.com/john"
-    }]
-  },
-  "work": [{
-    "company": "Company",
-    "position": "President",
-    "website": "http://company.com",
-    "startDate": "2013-01-01",
-    "endDate": "2014-01-01",
-    "summary": "Description...",
-    "highlights": [
-      "Started the company"
-    ]
-  }],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "website": "http://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description...",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
-  "education": [{
-    "institution": "University",
-    "area": "Software Development",
-    "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
-    "gpa": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
+
   "awards": [{
     "title": "Award",
     "date": "2014-11-01",

@@ -42,15 +42,19 @@ header {
 
 main {
   background-color: $base;
-  text-align: center;
+  // text-align: center;
   width: 100vw;
 
   form {
     border-right: 3px dotted #121212;
+    box-shadow: inset 5px 5px 15px 1px rgba(145, 143, 141, 0.75);
+    display: inline-block;
+    height: 90vh;
+    margin-top: 5vh;
     overflow: scroll;
     padding: 0;
     text-align: center;
-    width: 35vw;
+    width: 75vw;
 
     legend {
       font-weight: bold;
@@ -58,14 +62,7 @@ main {
   }
 
   #display {
-    width: 60vw;
-  }
-
-  .sections {
-    display: inline-block;
-    height: 100vh;
-    margin: 5vh auto;
-    min-height: 100vh;
+    display: none;
   }
 }
 
@@ -79,7 +76,7 @@ main {
   width: 100%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   main {
     .sections {
       width: 90vw;
